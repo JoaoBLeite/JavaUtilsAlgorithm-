@@ -1,3 +1,5 @@
+package Sort;
+
 import java.util.Random;
 
 /*
@@ -9,7 +11,7 @@ import java.util.Random;
  * Quick Sort is O(n2), while Merge Sort and Heap Sort guarantee 
  * n∗logn for all cases.
  */
-public class Quicksort {
+public class Quicksort extends SortUtils {
 
     private static final Random RANDOM = new Random();
     private static final int LIMIT_VALUE = 100;
@@ -24,7 +26,7 @@ public class Quicksort {
 
         System.out.println("Before: ");
         printArray(array);
-
+        
         quicksort(array);
 
         System.out.println("\nAfter: ");
@@ -70,16 +72,4 @@ public class Quicksort {
         quicksort(array, rightPointer + 1, high);
     }
 
-    private static void swap(int[] array, int index1, int index2) {
-        int temp = array[index1];
-        array[index1] = array[index2];
-        array[index2] = temp;
-    }
-
-    private static void printArray(int[] array) {
-        System.out.print("[");
-        for (int i : array)
-            System.out.print(" " + i + " ");
-        System.out.println("]");
-    }
 }
