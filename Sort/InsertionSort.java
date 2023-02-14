@@ -1,5 +1,3 @@
-package Sort;
-
 public class Insertionsort extends SortUtils {
     
     private static final int LIMIT_VALUE = 100;

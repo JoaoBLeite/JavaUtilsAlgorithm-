@@ -1,5 +1,3 @@
-package Sort;
-
 /*
  * Quicksort algorithm
  * 

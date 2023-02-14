@@ -1,5 +1,3 @@
-package Sort;
-
 import java.util.Random;
 
 /**
