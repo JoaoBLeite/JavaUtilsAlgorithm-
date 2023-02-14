@@ -1,6 +1,6 @@
 package Sort;
 
-public class InsertionSort extends SortUtils {
+public class Insertionsort extends SortUtils {
     
     private static final int LIMIT_VALUE = 100;
     private static final int ARRAY_SIZE = 10;
