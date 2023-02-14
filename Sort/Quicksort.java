@@ -1,7 +1,5 @@
 package Sort;
 
-import java.util.Random;
-
 /*
  * Quicksort algorithm
  * 
@@ -13,16 +11,12 @@ import java.util.Random;
  */
 public class Quicksort extends SortUtils {
 
-    private static final Random RANDOM = new Random();
     private static final int LIMIT_VALUE = 100;
     private static final int ARRAY_SIZE = 10;
 
     public static void main(String[] args) {
-        
-        int[] array = new int[ARRAY_SIZE];
-        for (int i = 0; i < array.length; i++) {
-            array[i] = RANDOM.nextInt(LIMIT_VALUE);
-        }
+
+        int[] array = getRandomArray(ARRAY_SIZE, LIMIT_VALUE);
 
         System.out.println("Before: ");
         printArray(array);
@@ -46,7 +40,7 @@ public class Quicksort extends SortUtils {
         }
 
         // Choosing a pivot
-        int pivotIndex = RANDOM.nextInt(high - low) + low;
+        int pivotIndex = getRandomNumber(high - low) + low;
         int pivot = array[pivotIndex];
         swap(array, pivotIndex, high);
 
